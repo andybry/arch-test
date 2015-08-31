@@ -4,7 +4,7 @@ A minimal [arch][arch] application.
 
 ## Compiling front end code
 
-    $(npm bin)/webpack app/app.js dist/app.js
+    $(npm bin)/webpack
 
 
 ## Running
