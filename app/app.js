@@ -43,8 +43,3 @@ var Application = Arch.application.create({
   },
   start: function(appState) {}
 });
-
-module.exports = Application;
-if(typeof window !== 'undefined') {
-  window.Application = Application;
-}
