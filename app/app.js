@@ -1,10 +1,25 @@
 var Arch = require('arch');
 var React = require('react');
 
+var HtmlTemplate = React.createClass({
+  render: function() {
+    return (
+      <html>
+        <head>
+          <title>{this.props.title}</title>
+        </head>
+        <body dangerouslySetInnerHTML={{__html: this.props.body}}></body>
+      </html>
+    );
+  }
+});
+
 var Route = React.createClass({
   getLayoutTemplate: function() {
     return function(context) {
-      return context.body;
+      return React.renderToStaticMarkup(
+        <HtmlTemplate {...context} />
+      );
     }
   },
   getTitle: function() {
