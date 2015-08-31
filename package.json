@@ -9,8 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "arch": "arch-js/arch#85165e43aee32f1128b087f1bb009326608be106",
-    "react": "^0.13.3"
+    "arch": "arch-js/arch#85165e43aee32f1128b087f1bb009326608be106"
   },
   "devDependencies": {
     "babel-core": "^5.8.23",
