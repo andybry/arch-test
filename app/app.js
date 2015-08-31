@@ -1,18 +1,6 @@
 var Arch = require('arch');
 var React = require('react');
-
-var HtmlTemplate = React.createClass({
-  render: function() {
-    return (
-      <html>
-        <head>
-          <title>{this.props.title}</title>
-        </head>
-        <body dangerouslySetInnerHTML={{__html: this.props.body}}></body>
-      </html>
-    );
-  }
-});
+var HtmlTemplate = require('./HtmlTemplate');
 
 var Route = React.createClass({
   getLayoutTemplate: function() {
@@ -30,7 +18,7 @@ var Route = React.createClass({
   }
 });
 
-var Application = Arch.application.create({
+module.exports = Arch.application.create({
   getInitialState: function() {
     return {};
   },
