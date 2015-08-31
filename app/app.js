@@ -1,16 +1,16 @@
-var Arch = require('arch');
-var BaseRoute = require('./routes/BaseRoute');
+import Arch from 'arch';
+import BaseRoute from './routes/BaseRoute';
 
-module.exports = Arch.application.create({
-  getInitialState: function() {
+export default Arch.application.create({
+  getInitialState() {
     return {};
   },
-  routes: function() {
-    var page = Arch.routes.page;
-    var define = Arch.routes.define;
+  routes() {
+    const page = Arch.routes.page;
+    const define = Arch.routes.define;
     return define(
       page('*', BaseRoute)
     );
   },
-  start: function(appState) {}
+  start(appState) {}
 });

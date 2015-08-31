@@ -1,18 +1,13 @@
-var HtmlTemplate = require('../HtmlTemplate');
+import HtmlTemplate from '../HtmlTemplate';
 
-module.exports = React.createClass({
-  getLayoutTemplate: function() {
-    return function(context) {
-      return React.renderToStaticMarkup(
-        <HtmlTemplate {...context} />
-      );
-    }
-  },
-  getTitle: function() {
+export default class extends React.Component {
+  getLayoutTemplate() {
+    return (context) => React.renderToStaticMarkup(<HtmlTemplate {...context} />);
+  }
+  getTitle() {
     return 'The title of the application'
-  },
-  render: function() {
+  }
+  render() {
     return <p>Minimal Arch application</p>;
   }
-});
-
+}

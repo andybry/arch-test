@@ -1,5 +1,5 @@
-module.exports = React.createClass({
-  render: function() {
+export default class extends React.Component{
+  render() {
     return (
       <html>
         <head>
@@ -9,4 +9,4 @@ module.exports = React.createClass({
       </html>
     );
   }
-});
+};
